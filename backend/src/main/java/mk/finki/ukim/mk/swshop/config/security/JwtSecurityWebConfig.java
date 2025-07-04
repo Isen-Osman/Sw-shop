@@ -3,7 +3,7 @@ package mk.finki.ukim.mk.swshop.config.security;
 
 import mk.finki.ukim.mk.swshop.helpers.JwtHelper;
 import mk.finki.ukim.mk.swshop.security.CustomUsernamePasswordAuthenticationProvider;
-import mk.finki.ukim.mk.swshop.web.fillters.JwtFillter;
+import mk.finki.ukim.mk.swshop.web.fillters.JwtFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -25,9 +25,9 @@ import java.util.List;
 public class JwtSecurityWebConfig {
 
     private final CustomUsernamePasswordAuthenticationProvider authenticationProvider;
-    private final JwtFillter jwtFilter;
+    private final JwtFilter jwtFilter;
 
-    public JwtSecurityWebConfig(CustomUsernamePasswordAuthenticationProvider authenticationProvider, JwtFillter jwtFilter) {
+    public JwtSecurityWebConfig(CustomUsernamePasswordAuthenticationProvider authenticationProvider, JwtFilter jwtFilter) {
         this.authenticationProvider = authenticationProvider;
         this.jwtFilter = jwtFilter;
     }

@@ -1,5 +1,6 @@
 package mk.finki.ukim.mk.swshop.config.init;
 
+import jakarta.annotation.PostConstruct;
 import mk.finki.ukim.mk.swshop.model.domain.Category;
 import mk.finki.ukim.mk.swshop.model.domain.User;
 import mk.finki.ukim.mk.swshop.model.enumerations.Role;
@@ -25,7 +26,8 @@ public class DataInitializer {
         this.passwordEncoder = passwordEncoder;
     }
 
-    //    @PostConstruct
+
+     @PostConstruct
     public void init() {
         categoryRepository.save(new Category("Sports", "Sports categoryId"));
         categoryRepository.save(new Category("Food", "Food categoryId"));

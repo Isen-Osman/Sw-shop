@@ -23,13 +23,15 @@ import org.springframework.web.servlet.HandlerExceptionResolver;
 import java.io.IOException;
 
 @Component
-public class JwtFillter extends OncePerRequestFilter {
+public class JwtFilter extends OncePerRequestFilter {
 
     private final JwtHelper jwtHelper;
     private final UserService userService;
     private final HandlerExceptionResolver handlerExceptionResolver;
 
-    public JwtFillter(JwtHelper jwtHelper, UserService userService, HandlerExceptionResolver handlerExceptionResolver) {
+
+
+    public JwtFilter(JwtHelper jwtHelper, UserService userService, HandlerExceptionResolver handlerExceptionResolver) {
         this.jwtHelper = jwtHelper;
         this.userService = userService;
         this.handlerExceptionResolver = handlerExceptionResolver;
